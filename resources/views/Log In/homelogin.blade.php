@@ -14,14 +14,10 @@
 <div class="container" id="container">
 
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form >
 			<h1>Crie sua conta</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>Use seu email para registrar-se</span>
+
+
 			<input type="text" placeholder="Name" />
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
@@ -30,16 +26,13 @@
 	</div>
 
 	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Sign in</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>Use sua conta existente</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+		<form method="post" action="/login">
+            @csrf
+			<h1>Logar</h1>
+
+
+			<input type="email" placeholder="Email"  name="email"/>
+			<input type="password" placeholder="Password" name="password"/>
 			<a href="#">Esqueceu a senha?</a>
 			<button>Sign In</button>
 		</form>
@@ -72,7 +65,7 @@
 
 <!--Injetando configurações javascript-->
 
-<script src="`{{asset('/js/login.js')}}"> </script>
+<script src="{{asset('/js/login.js')}}"> </script>
   </body>
 
 </html>
