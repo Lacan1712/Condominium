@@ -14,7 +14,7 @@
 <div class="container" id="container">
 
 	<div class="form-container sign-up-container">
-		<form >
+		<form>
 			<h1>Crie sua conta</h1>
 
 
@@ -26,7 +26,7 @@
 	</div>
 
 	<div class="form-container sign-in-container">
-		<form method="post" action="/login">
+		<form action="{{route('Log In')}}" method="POST" >
             @csrf
 			<h1>Logar</h1>
 
